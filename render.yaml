@@ -3,7 +3,7 @@ services:
     name: n8n
     env: node
     buildCommand: npm install
-    startCommand: node start.js
+    startCommand: npm run render-start
     envVars:
       - key: DB_TYPE
         value: postgresdb

@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: n8n
+    env: node
+    buildCommand: npm install
+    startCommand: node start.js
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      envVars:
+  - key: DB_TYPE
+    value: postgresdb
+  - key: DB_POSTGRESDB_HOST
+    value: ep-fragrant-art-a47wgor6-pooler.us-east-1.aws.neon.tech
+  - key: DB_POSTGRESDB_PORT
+    value: 5432
+  - key: DB_POSTGRESDB_DATABASE
+    value: neondb
+  - key: DB_POSTGRESDB_USER
+    value: neondb_owner
+  - key: DB_POSTGRESDB_PASSWORD
+    sync: false
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true
+      - key: N8N_HOST
+        fromService:
+          name: n8n
+          type: web
+          property: host
+      - key: WEBHOOK_URL
+        fromService:
+          name: n8n
+          type: web
+          property: url
+      - key: N8N_PROTOCOL
+        value: https
+      - key: N8N_USER_MANAGEMENT_DISABLED
+        value: "false"

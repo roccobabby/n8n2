@@ -1,0 +1,8 @@
+{
+  "build": {
+    "nodeVersion": "18"
+  },
+  "deploy": {
+    "memory": "512"
+  }
+}

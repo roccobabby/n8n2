@@ -1,6 +1,6 @@
 {
   "name": "n8n-monorepo",
-  "version": "1.94.0",
+  "version": "1.93.0",
   "private": true,
   "engines": {
     "node": ">=20.15",
@@ -36,7 +36,7 @@
     "optimize-svg": "find ./packages -name '*.svg' ! -name 'pipedrive.svg' -print0 | xargs -0 -P16 -L20 npx svgo",
     "render-start": "node start.js",
     "start": "run-script-os",
-    "start:default": "cd packages/cli/bin && node --max-old-space-size=200 ./n8n",
+    "start:default": "cd packages/cli/bin && ./n8n",
     "start:tunnel": "./packages/cli/bin/n8n start --tunnel",
     "start:windows": "cd packages/cli/bin && n8n",
     "test": "JEST_JUNIT_CLASSNAME={filepath} turbo run test",

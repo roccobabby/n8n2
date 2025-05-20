@@ -47,7 +47,7 @@
     "webhook": "./packages/cli/bin/n8n webhook",
     "worker": "./packages/cli/bin/n8n worker"
   },
-  "devDependencies": {"devDependencies": {
+  "devDependencies": {
   "@biomejs/biome": "^1.9.0",
   "@types/node": "*",
   "turbo": "2.3.3",
